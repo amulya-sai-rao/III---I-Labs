@@ -1,0 +1,19 @@
+<!DOCSTYLE html>
+<html>
+	<head>
+		<title>Number Count</title>
+	<head>
+	<body>
+		<script>
+			var n = prompt("Enter a number");
+			var count=0;
+			for(var i=0;i<=n;i++){
+				if(i%2 != 0){
+					document.body.innerHTML = "<h1>" + i + "</h1>";
+					count++;
+				}
+			}
+			document.body.innerHTML = "<h1>The number of odd integers between 1 and " + n + " is : " + count + "</h1>";
+		</script>
+	</body>
+</html>
