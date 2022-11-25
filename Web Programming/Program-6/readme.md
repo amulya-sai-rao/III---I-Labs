@@ -1,1 +1,1 @@
-5. Create a script that prompts the user for a number and then counts from 1 to that number displaying only the odd numbers. 
+6. Create a script that will check the field in Assignment 1 for data and alert the user if it is blank. This script should run from a button. 
