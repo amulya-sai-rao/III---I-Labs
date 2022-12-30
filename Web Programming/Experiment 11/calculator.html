@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html lang = "en">  
+<head>  
+	<title> Simple Calculator </title>  
+	<style>  
+		input[type="button"] {
+		width:100%;
+		padding:5px;
+		font-weight:bold;
+		}
+		input[type="text"] {
+		width:93%;
+		padding:5px;
+		}
+	</style>  
+
+	<script language="javascript">
+		function calculate() {
+		    var eStr = form1.calc.value;
+		    var result;
+		    if (eStr.lastIndexOf('='))
+		    {
+			var sStr = eStr.substr(eStr.lastIndexOf('=')+1);
+			result = eval(sStr);
+		    }
+		    else {
+			result = eval(eStr);    
+		    }
+		    form1.calc.value += "="+result;
+		}
+	</script>
+
+</head>  
+
+<body>  
+	<center><h1> Simple Hand Calculator </h1>  
+	<form name = "form1">  
+		<table width="12%" border=1>
+			<tr><td colspan="4"><input type ="text" name = "calc"/></td></tr>
+			<tr>
+				<td><input type = "button" value = "1" onclick = "form1.calc.value += '1' "/></td>
+				<td><input type = "button" value = "2" onclick = "form1.calc.value += '2' "/></td>  
+				<td><input type = "button" value = "3" onclick = "form1.calc.value += '3' "/></td>  
+				<td><input type = "button" value = "+" onclick = "form1.calc.value += '+' "/></td>  
+			</tr>  
+			<tr>
+				<td><input type = "button" value = "4" onclick = "form1.calc.value += '4' "/></td>  
+				<td><input type = "button" value = "5" onclick = "form1.calc.value += '5' "/></td>  
+				<td><input type = "button" value = "6" onclick = "form1.calc.value += '6' "/></td>  
+				<td><input type = "button" value = "-" onclick = "form1.calc.value += '-' "/></td>  
+			</tr> 
+			<tr>
+				<td><input type = "button" value = "7" onclick = "form1.calc.value += '7' "/></td>  
+				<td><input type = "button" value = "8" onclick = "form1.calc.value += '8' "/></td>  
+				<td><input type = "button" value = "9" onclick = "form1.calc.value += '9' "/></td>  
+				<td><input type = "button" value = "*" onclick = "form1.calc.value += '*' "/></td>  
+			</tr>   
+			<tr>
+				<td><input type = "button" value = "/" onclick = "form1.calc.value += '/' "/></td>  
+				<td><input type = "button" value = "0" onclick = "form1.calc.value += '0' "/></td>  
+				<td><input type = "button" value = "." onclick = "form1.calc.value += '.' "/></td> 
+				<td><input type = "button" value = "=" onclick = "calculate()"/></td>  
+			</tr>
+			<tr><td colspan="4">
+				<input type = "button" value = "Clear All" onclick = "form1.calc.value = ' ' "/>  
+			</td>
+			</tr>
+	 	</table> <br>
+	</form></center>
+</body>  
+</html>
+
